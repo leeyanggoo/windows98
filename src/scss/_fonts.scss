@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/DungGeunMo/DungGeunMo.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/DungGeunMo/DungGeunMo.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/DungGeunMo/DungGeunMo.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/DungGeunMo/DungGeunMo.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/DungGeunMo/DungGeunMo.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url("fonts/ms_sans_serif.woff") format("woff");
+    src: url("fonts/ms_sans_serif.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url("fonts/ms_sans_serif_bold.woff") format("woff");
+    src: url("fonts/ms_sans_serif_bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+  }

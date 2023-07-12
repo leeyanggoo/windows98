@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Project</title>
+  <script type="module" crossorigin src="/assets/index-17c43eed.js"></script>
+  <link rel="stylesheet" href="/assets/index-a3a0ce8a.css">
+</head>
+<body>
+    <body>
+        <div class="cursor">
+            <img src="data:application/octet-stream;base64,AAACAAEAICAAAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD//wD/AAAA/wD/AP//AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4gAAAAAAAAAAAAAAAAAAAf4AAAAAAAAAAAAAAAAAAB/gAAAAAAAAAAAAAAAAAAAf4AAAAAAAAAAAAAAAAcAB/gAAAAAAAAAAAAAAAAHgAf4AAAAAAAAAAAAAAAAB/gPgAAAAAAAAAAAAAAAAAf/gAAAAAAAAAAAAAAAAAAH//+IiAAAAAAAAAAAAAAAB//4iIAAAAAAAAAAAAAAAAf/iIgAAAAAAAAAAAAAAAAH/4iAAAAAAAAAAAAAAAAAB/iIAAAAAAAAAAAAAAAAAAf4gAAAAAAAAAAAAAAAAAAHiAAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////////////////////////////////////////////////j////w////8P///+H///3h///8w////EP///wH///8AH///AD///wB///8A////Af///wP///8H////D////x////8/////f////w==" alt>
+        </div>
+        <header id="header">
+            <h1>HMM GAME WORLD</h1>
+            <div class="info"></div>
+        </header>
+        <main>
+            <div class="icon__box">
+                <div class="icon1">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUAAAD///+AgAD//wDAwMAA/wAAgACAgIAAAP8AAID/AACAAAAA//9atMygAAAAAXRSTlMAQObYZgAAAAFiS0dEAf8CLd4AAAAHdElNRQfiBhoAOB+9K+N8AAABQUlEQVQ4y63Tq27DMBQG4AzsAVwVDAx5kcaTvsA6Sxkd6PjI+KJINi2yLQ10KB4cDSsOGgvIQ+34ljhOIhX0R5a/c+KL4iS5bm7QLBsL+SzZJfAcwe3h8KqHu3QFMpxG8PbxbqZZXWKb1AFCMEBbLjmxe91OgTFVfy4B5VLKagFemO6pPDSQXw2o4JwLyasZ6A6mlKpiIFxHQo+Ftm3PYwdjQtXUwBnZxeEgNkLK0kDf/xm4Y2zowRo6cZx06ONgHIDvgI0pC/I77IB6WTpAwa6Egl3hCRBXzynFaRZ1wOdhntI8hMLXU3dAB3C75vuUuisZoHD1/hIHYK4eRVD4+hhgCTcfd5j5pxkQssePFbEJALLHD+Gf2DQediRfhugZrELbrkCSdHKD5zEwvsl7cRrfbPfVj5mACHMJ/ExySq6efwdZL1k8zNzaAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA2LTI2VDAwOjU2OjMxLTA0OjAw1MEv5wAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNi0yNlQwMDo1NjozMS0wNDowMKWcl1sAAAAASUVORK5CYII=" alt="뮤직">
+                    <span>Windows<br>Media Player</span>
+                </div>
+                <div class="icon2">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASsSURBVHgB7d1BctpKFEDR5tffN/LKlfICrE6l0xEXzpniiGC41YNnPR5jjHMASf8NIEvAECZgCBMwhAkYwgQMYQKGsP9nP3CexsRwl8fjcfm4ExjCBAxhAoYwAUOYgCFMwBAmYAibzoFnZnOqdzebk7/77+fTX/+q1b+zcAJDmIAhTMAQJmAIEzCECRjCBAxhy3PgT/fpc05z3ns5gSFMwBAmYAgTMIQJGMIEDGEChjBz4EXuB3Y/8J2cwBAmYAgTMIQJGMIEDGEChjABQ5g58KLdc87pnHVMPL4mP3CMFea893ICQ5iAIUzAECZgCBMwhAkYwgQMYebAi3bfD/vqU1b3A9/LCQxhAoYwAUOYgCFMwBAmYAgTMISZAy/aPuec3s97L3PeezmBIUzAECZgCBMwhAkYwgQMYQKGMHPgRbv3Np/n8/qfj9Xrv/beaa45gSFMwBAmYAgTMIQJGMIEDGEChjBz4EXrc9L3vj57OYEhTMAQJmAIEzCECRjCBAxhAoaw7zHg5Q2hvv915hhcOQY/W+3LCQxhAoYwAUOYgCFMwBAmYAgTMISZA8ONzIHhgwkYwgQMYQKGMAFDmIAhTMAQtn0v9GzONdtM/DVZS3wcgzd2jsXPz7h2jDYnMIQJGMIEDGEChjABQ5iAIUzAEPYPvh94bc7Lp1ub8747JzCECRjCBAxhAoYwAUOYgCFMwBC2fQ5szssKH59rTmAIEzCECRjCBAxhAoYwAUOYgCFs+xz4+dy7Fzq/d/qYPP68fnj66uNf3/zcvBd6+v28Y+LmD5ATGMIEDGEChjABQ5iAIUzAECZgCHuDvdBvvnd68v9/TObEfXv3Qi/PeW/mBIYwAUOYgCFMwBAmYAgTMIQJGMLye6E/fu/0m7/+7S8v/gFyAkOYgCFMwBAmYAgTMIQJGMIEDGH790Ife/f6Pjfvhb7d6l7oY6Tt3gs9nte/4Omz3/wBcgJDmIAhTMAQJmAIEzCECRjCBAxh9++FHpuvby903N7Pz6vPeWecwBAmYAgTMIQJGMIEDGEChjABQ9j+vdBjL3uhx1vb/fJefc474wSGMAFDmIAhTMAQJmAIEzCECRjC9u+F3rzXd/fe6XOyd/r66t8/MHuG4/rhF98LfW7ey739/Z3shZ6+v/ZCA39KwBAmYAgTMIQJGMIEDGEChrD33ws9dl59/Macd9HL74XevZf75vfXXmhgFwFDmIAhTMAQJmAIEzCECRjC+nuhx2aP154D3r0X+uveMfhfeAJ7oYGbCBjCBAxhAoYwAUOYgCFMwBD2fTvk5eLd6V7kx/UdlefuvdCb9zaf5+Le4A+//vJe6OfmvdObr38c14+v9uUEhjABQ5iAIUzAECZgCBMwhAkYwvJ7oadzzN3XX7xfuH792/dCv/z193ICQ5iAIUzAECZgCBMwhAkYwgQMYdvvBz7GXsf2Z+DKMbvh9cO5Hxj4kYAhTMAQJmAIEzCECRjCBAxh2+fAwM/MgeGDCRjCBAxhAoYwAUOYgCFMwBC2vBd6NscC9nECQ5iAIUzAECZgCBMwhAkYwgQMYdP7gYHX5QSGMAFDmIAhTMAQJmAIEzCECRjCfgFrWc137eILLAAAAABJRU5ErkJggg==" alt="테트리스">
+                    <span>Tetris</span>
+                </div>
+                <div class="icon3">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACZmQAAAAD4+Pj//5nMzGb/zJn////5no2yAAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXARMJeV+TAAABE0lEQVQ4y82TzQ3CMAyFywhtxb1iA1QWQLJ858AGlvcfAfs5aRMTceapaoVfPv9FTNMPzdDyFb/s0H3LxkqhjFwexXhuYyAjB5CRE0jI9X3qNVfZkXUfautSFQkzL9nwIAlJNixExKSJELGgQJlge9jzJQPnzeoJL4uPDAiORB3B3pM34J52hADg1BVXE3ZbA785sCZVBULt5BwtAUuTCypEiSNVNCmM8UTTrsxTL66kzRyOYOGoXYuXRB40wLrVbkAUttdRg33dFL16Lj264siF9OThZkBcKqFVrYSfjWVo7MuIdkBcNoBzV1K2YQQ+Gqk8HPtGYXZIK1EuNJwyIGagGE2RSNHudR5qmW5jff2F/1wfr4rjk5A1shsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjRUMjM6MDE6MTktMDQ6MDDthFzGAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI0VDIzOjAxOjE5LTA0OjAwnNnkegAAAABJRU5ErkJggg==" alt="뮤직">
+                    <span>Play<br>Music</span>
+                </div>
+                <div class="icon4">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACZmQAAAAD4+Pj//5nMzGb/zJn////5no2yAAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXARMJeV+TAAABE0lEQVQ4y82TzQ3CMAyFywhtxb1iA1QWQLJ858AGlvcfAfs5aRMTceapaoVfPv9FTNMPzdDyFb/s0H3LxkqhjFwexXhuYyAjB5CRE0jI9X3qNVfZkXUfautSFQkzL9nwIAlJNixExKSJELGgQJlge9jzJQPnzeoJL4uPDAiORB3B3pM34J52hADg1BVXE3ZbA785sCZVBULt5BwtAUuTCypEiSNVNCmM8UTTrsxTL66kzRyOYOGoXYuXRB40wLrVbkAUttdRg33dFL16Lj264siF9OThZkBcKqFVrYSfjWVo7MuIdkBcNoBzV1K2YQQ+Gqk8HPtGYXZIK1EuNJwyIGagGE2RSNHudR5qmW5jff2F/1wfr4rjk5A1shsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjRUMjM6MDE6MTktMDQ6MDDthFzGAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI0VDIzOjAxOjE5LTA0OjAwnNnkegAAAABJRU5ErkJggg==" alt="뮤직">
+                    <span>Play<br>Music</span>
+                </div>
+                <div class="icon5">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACZmQAAAAD4+Pj//5nMzGb/zJn////5no2yAAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXARMJeV+TAAABE0lEQVQ4y82TzQ3CMAyFywhtxb1iA1QWQLJ858AGlvcfAfs5aRMTceapaoVfPv9FTNMPzdDyFb/s0H3LxkqhjFwexXhuYyAjB5CRE0jI9X3qNVfZkXUfautSFQkzL9nwIAlJNixExKSJELGgQJlge9jzJQPnzeoJL4uPDAiORB3B3pM34J52hADg1BVXE3ZbA785sCZVBULt5BwtAUuTCypEiSNVNCmM8UTTrsxTL66kzRyOYOGoXYuXRB40wLrVbkAUttdRg33dFL16Lj264siF9OThZkBcKqFVrYSfjWVo7MuIdkBcNoBzV1K2YQQ+Gqk8HPtGYXZIK1EuNJwyIGagGE2RSNHudR5qmW5jff2F/1wfr4rjk5A1shsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjRUMjM6MDE6MTktMDQ6MDDthFzGAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI0VDIzOjAxOjE5LTA0OjAwnNnkegAAAABJRU5ErkJggg==" alt="뮤직">
+                    <span>Play<br>Music</span>
+                </div>
+                <div class="icon6">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUAAACZmQAAAAD4+Pj//5nMzGb/zJn////5no2yAAAAAXRSTlMAQObYZgAAAAFiS0dEBxZhiOsAAAAHdElNRQfiBhgXARMJeV+TAAABE0lEQVQ4y82TzQ3CMAyFywhtxb1iA1QWQLJ858AGlvcfAfs5aRMTceapaoVfPv9FTNMPzdDyFb/s0H3LxkqhjFwexXhuYyAjB5CRE0jI9X3qNVfZkXUfautSFQkzL9nwIAlJNixExKSJELGgQJlge9jzJQPnzeoJL4uPDAiORB3B3pM34J52hADg1BVXE3ZbA785sCZVBULt5BwtAUuTCypEiSNVNCmM8UTTrsxTL66kzRyOYOGoXYuXRB40wLrVbkAUttdRg33dFL16Lj264siF9OThZkBcKqFVrYSfjWVo7MuIdkBcNoBzV1K2YQQ+Gqk8HPtGYXZIK1EuNJwyIGagGE2RSNHudR5qmW5jff2F/1wfr4rjk5A1shsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDYtMjRUMjM6MDE6MTktMDQ6MDDthFzGAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA2LTI0VDIzOjAxOjE5LTA0OjAwnNnkegAAAABJRU5ErkJggg==" alt="뮤직">
+                    <span>Play<br>Music</span>
+                </div>
+            </div>
+    
+            <!-- 뮤직 플레이어 -->
+            <div class="music__wrap">
+                <div class="music__inner">
+                    <div class="music__header">
+                        <div class="music__title">
+                            <h2>Windows Media Player</h2>
+                            <button></button>
+                        </div>
+                        <div class="music__btn">
+                            <button class="list" id="control-list" title="재생 목록">Play List</button>
+                        </div>
+                    </div>
+                    <div class="music__contents">
+    
+                        <div class="image">
+                            <img src="/assets/music_view01-c48829f3.gif" alt="음악">
+                        </div>
+                        <div class="music__control">
+    
+                            <div class="progress">
+                                <div class="bar">
+                                    <audio id="main-audio" src="audio/music_audio01.mp3"></audio>
+                                </div>
+                            </div>
+    
+                            <div class="control">
+                                <div class="control__btn">
+                                    <button class="play" id="control-play" title="재생"></button>
+                                    <button class="pause" id="control-pause" title="일시정지"></button>
+                                    <button class="stop" id="control-stop" title="정지"></button>
+                                    <div class="separator"></div>
+                                    <button class="prev" id="control-prev" title="이전 곡"></button>
+                                    <button class="next" id="control-next" title="다음 곡"></button>
+                                    <div class="separator"></div>
+                                    <button class="repeat" id="control-repeat" title="전체 반복"></button>
+                                    <!-- <button class="repeat_one" id="control-repeat_one" title="전체 반복"></button>
+                                    <button class="shuffle" id="control-shuffle" title="전체 반복"></button> -->
+                                </div>
+                                <div class="control__volume">
+                                    <button class="on" id="control-sound" title="볼륨"></button>
+                                    <input type="range" id="control-vol" min="0" max="1" step="0.01" value="1">
+                                </div>
+                            </div>
+    
+                            <div class="title">
+                                <h3></h3>
+                                <p></p>
+                                <div class="timer">
+                                    <span class="current"></span> /
+                                    <span class="duration"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music__list">
+                        <div class="music__list__title">
+                            <h3>Play List</h3>
+                            <button class="close"></button>
+                        </div>
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //뮤직 플레이어 -->
+
+            <!-- 테트리스 -->
+                <div class="tetris__wrap">
+                    <div class="tetris__inner">
+                        <div class="tetris__modal">
+                            <div class="tetris__start">
+                                <img src="/assets/tetris-84bccb9b.png" alt="테트리스">
+                                <p>press enter to play</p>
+                            </div>
+                        </div>
+                        <div class="tetris__header">
+                            <div class="tetris__title">
+                                <h2>Tetris for Windows</h2>
+                                <button></button>
+                            </div>
+                        </div>
+                        <div class="tetris__contents">
+                            <div class="tetris__text">
+                                <div class="tetris__score">Score : <br><span>0</span></div>
+                                <div class="tetris__level">Level : <br><span>1</span></div>
+                                <div class="tetris__next">Next : 
+                                    <ul></ul>
+                                </div>
+                                <div class="tetris__music">Music :
+                                    <!-- <button class="tetris__music__play" title="재생"></button> -->
+                                    <button class="tetris__music__pause" title="일시정지"></button>
+
+                                    <audio id="tetris-audio" src="audio/music_tetris.mp3"></audio>
+                                    <audio id="tetris-complete" src="audio/um.mp3"></audio>
+                                    <audio id="tetris-over" src="audio/gameover.mp3"></audio>
+                                </div>
+                                <div class="tetris__pause">Pause : 
+                                    <button class="tetris__pause__btn" title="일시정지">
+                                        <img src="/assets/yoshi-run-4d770498.gif" alt="yoshi">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="tetris__play">
+                                <div class="view">
+                                    <ul></ul>
+                                </div>
+                                <div class="tetris__ending">
+                                    <span>game over T_T</span>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p>please try again!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- // 테트리스 -->
+        </main>
+    
+        <div id="toolbar">
+            <div class="toolbar-start-menu">
+              <button class="start-button">
+                Start
+              </button>
+              
+              <div class="start-menu-wrapper">
+                <div class="start-menu-title">
+                  <span><strong>Windows</strong>98</span>
+                </div>
+                
+                <div class="start-menu">
+                  <button class="start-menu-link">
+                    Shut down
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="toolbar-separator"></div>
+            
+            <div class="toolbar-left">
+              <button class="toolbar-icon ie"></button>
+              <button class="toolbar-icon outlook"></button>
+              <button class="toolbar-icon desktop"></button>
+              <button class="toolbar-icon channels"></button>
+            </div>
+            
+            <div class="toolbar-separator"></div>
+
+            <div class="toolbar-right">
+              <div class="time"></div>
+            </div>
+          </div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    
+    
+</body>
+</html>

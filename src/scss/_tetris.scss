@@ -1,0 +1,290 @@
+@mixin center {
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    // transform: translate(-50%, -50%);
+}
+/* tetris__wrap
+    +tetris__inner
+        +tetris__modal
+            +tetris__start
+        +tetris__header
+            +tetris__title
+        +tetris__contents
+            +tetris__text
+                +tetris__score
+                +tetris__level
+                +tetris__next
+                +tetris__music
+                +tetris__pause
+            +tetris__play
+                +view
+                +tetris__ending
+*/
+.tetris__wrap {
+    @include center;
+    background: #c0c0c0;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
+                inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+    width: 600px;
+    height: 700px;
+    padding: 5px;
+    display: none;
+}
+.tetris__wrap.show {
+    display: block;
+}
+.tetris__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .tetris__modal {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        backdrop-filter: blur(10px);
+        display: none;
+        .tetris__start {
+            padding: 20% 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 80%;
+                margin-bottom: 40px;
+            }
+            p {
+                text-transform: uppercase;
+                font-size: 40px;
+                color: red;
+                animation: flickr 1s linear infinite;
+                text-shadow: -2px 0px #000, 0px 2px #000, 2px 0px #000, 0px -2px #000;
+            }
+        }
+        @keyframes flickr {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+
+}
+.tetris__header {
+    margin-bottom: 50px;
+    .tetris__title {
+        background: linear-gradient(90deg, #000080, #1084d0);
+        height: 30px;
+        text-align: left;
+        position: relative;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-size: 18px;
+            margin-left: 25px;
+        }
+
+        h2::after {
+            position: absolute;
+            content: "";
+            width: 22px;
+            height: 25px;
+            top: 2px;
+            left: 3px;
+            background-image: url(../images/tetris_icon.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        button {
+            min-width: 20px;
+            min-height: 20px;
+            background-image: url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H1H2V1H3V2H4H5V1H6V0H7H8V1H7V2H6V3H5V4H6V5H7V6H8V7H7H6V6H5V5H4H3V6H2V7H1H0V6H1V5H2V4H3V3H2V2H1V1H0V0Z' fill='black'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 60%;
+        }
+    }
+}
+
+.tetris__contents {
+    display: flex;
+    justify-content: center;
+    .tetris__text {
+        margin-right: 20px;
+        width: 200px;
+        padding: 50px;
+        background: #c0c0c0;
+        box-shadow: 5px 5px #808080, -5px -5px #fff, inset 20px 20px #c0c0c0,
+            inset -20px -20px #c0c0c0, inset 22px 22px #000,
+            inset -21px -21px #fff;
+        div {
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            span {
+                font-size: 24px;
+                font-weight: bold;
+                color: blue;
+            }
+        }
+        .tetris__music {
+            button {
+                display: inline-block;
+                min-width: 40px;
+                min-height: 40px;
+                padding: 0;
+                box-shadow: none;
+                background-image: url(../images/music_icon2.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            button.tetris__music__pause {
+                background-position: -40px -40px;
+            }
+            button.tetris__music__play {
+                background-position: -40px 0;
+            }
+
+        }
+        .tetris__next > ul {
+            margin-top: 20px;
+            > li {
+                width: 100%;
+                height: 25px;
+                > ul {
+                    display: flex;
+                    > li {
+                        width: 25px;
+                        height: 25px;
+                    }
+                    .Tmino {
+                        /* border: 6px outset #A042A2 !important; */
+                        background-color: #952d98;
+                        outline: 0.2px solid #fff;
+                    }
+                    .Imino {
+                        /* border: 6px outset #1AA9DE !important; */
+                        background-color: #009fda;
+                        outline: 0.2px solid #fff;
+                    }
+                    .Omino {
+                        /* border: 6px outset #FED01A !important; */
+                        background-color: #fecb00;
+                        outline: 0.2px solid #fff;
+                    }
+                    .Zmino {
+                        /* border: 6px outset #EF3E4D !important; */
+                        background-color: #ed2939;
+                        outline: 0.2px solid #fff;
+                    }
+                    .Smino {
+                        /* border: 6px outset #78C53E !important; */
+                        background-color: #69be28;
+                        outline: 0.2px solid #fff;
+                    }
+                    .Jmino {
+                        /* border: 6px outset #1A74C4 !important; */
+                        background-color: #0065bd;
+                        outline: 0.2px solid #fff;
+                    }
+                    .Lmino {
+                        /* border: 6px outset #FF861A !important; */
+                        background-color: #ff7900;
+                        outline: 0.2px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+    .tetris__play {
+        width: 300px;
+        position: relative;
+        .view {
+            > ul {
+                box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
+                    inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+                background-color: #000;
+                > li {
+                    width: 100%;
+                    height: 25px;
+                    > ul {
+                        display: flex;
+                        > li {
+                            width: 25px;
+                            height: 25px;
+                            outline: 0.2px solid #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .Tmino {
+            /* border: 6px outset #A042A2 !important; */
+            background-color: #952d98;
+        }
+        .Imino {
+            /* border: 6px outset #1AA9DE !important; */
+            background-color: #009fda;
+        }
+        .Omino {
+            /* border: 6px outset #FED01A !important; */
+            background-color: #fecb00;
+        }
+        .Zmino {
+            /* border: 6px outset #EF3E4D !important; */
+            background-color: #ed2939;
+        }
+        .Smino {
+            /* border: 6px outset #78C53E !important; */
+            background-color: #69be28;
+        }
+        .Jmino {
+            /* border: 6px outset #1A74C4 !important; */
+            background-color: #0065bd;
+        }
+        .Lmino {
+            /* border: 6px outset #FF861A !important; */
+            background-color: #ff7900;
+        }
+        .End {
+            background-color: gray;
+        }
+
+        .tetris__ending{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: none;
+
+            span {
+                font-size: 100px;
+                text-transform: uppercase;
+                text-shadow: -5px 0px #000, 0px 5px #000, 5px 0px #000, 0px -5px #000;
+            }
+            p {
+                text-transform: uppercase;
+                font-size: 40px;
+                color: red;
+                text-shadow: -2px 0px #000, 0px 2px #000, 2px 0px #000, 0px -2px #000;
+                animation: flickr 1s linear infinite;
+            }
+        }
+    }
+}

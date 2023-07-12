@@ -1,0 +1,41 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    // font-size: 15px;
+    cursor: none;
+    // font-family: "Pixelated MS Sans Serif", Arial;
+    font-family: "MS Sans Serif", Arial;
+    -webkit-font-smoothing: none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+} 
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+
+.cursor {
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    pointer-events: none;
+    user-select: none;
+}
