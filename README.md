@@ -1,7 +1,7 @@
 # Windows98 Theme / Music Player / Tetris
 ![screencapture-win98-game-web-app-2023-06-07-23_01_26](https://github.com/leeyanggoo/windows98/assets/125417787/d59d0b0f-6b91-415c-bf58-e14728bc59b6)
 
->  ###_HTML, CSS, JS를 이용해 만든 Windwos98 테마의 사이트입니다._
+>  ### _HTML, CSS, JS를 이용해 만든 Windwos98 테마의 사이트입니다._
 > + Live Demo : https://win98-game.web.app/
 > + Refer to : https://jdan.github.io/98.css/#intro
 
